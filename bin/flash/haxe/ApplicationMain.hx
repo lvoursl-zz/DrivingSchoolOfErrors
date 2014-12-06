@@ -35,6 +35,10 @@ class ApplicationMain {
 		types.push (AssetType.IMAGE);
 		
 		
+		urls.push ("img/car.xcf");
+		types.push (AssetType.BINARY);
+		
+		
 		urls.push ("img/level.png");
 		types.push (AssetType.IMAGE);
 		

@@ -20,6 +20,7 @@ class Main extends Sprite
 	var frame:Int = 0;
 	public static var keys:Map<Int,Bool> = new Map();
 	var car:Car;
+	var scale:Float = 1;
 	/* ENTRY POINT */
 	
 	function resize(e) 
@@ -32,14 +33,17 @@ class Main extends Sprite
 	{
 		if (inited) return;
 		inited = true;
+		
 		Lib.current.stage.displayState = StageDisplayState.FULL_SCREEN_INTERACTIVE;
+		
 		game = new Game();
 		addChild(game);
 		car = new Car();
-		addChild(car.bmp);
-		//car.bmp.rotation = 90;
-		stage.addEventListener(KeyboardEvent.KEY_DOWN, keyPressed_handler);
-		stage.addEventListener(KeyboardEvent.KEY_UP, keyReleased_handler);
+		addChild(car);
+		
+		stage.addEventListener(KeyboardEvent.KEY_DOWN, car.keyDownHandler);
+		stage.addEventListener(KeyboardEvent.KEY_UP, car.keyUpHandler);
+		stage.addEventListener(Event.ENTER_FRAME, car.ModifyCar);
 		stage.addEventListener(Event.ENTER_FRAME, onFrame);
 		//addEventListener(Event.ENTER_FRAME, car.Update, false, 0 , true);
 		// (your code here)
@@ -60,7 +64,25 @@ class Main extends Sprite
 	}
 	
 	public function onFrame(e:Event) {
-		car.moveCar();
+		
+		/*for (tile in game.arrayOfFields) {
+			if (car.bmp.hitTestObject(tile)) {
+				//car.bmp.scaleX = 0.5 / scale;
+				//car.bmp.scaleY = 0.5 / scale;
+				/*car.bmp.width = car.bmp.width / scale;
+				car.bmp.height = car.bmp.height / scale;
+				scale++;
+				car.setDefault();
+				trace(frame);
+				/*car.bmp.width = car.bmp.width / scale;
+				car.bmp.height = car.bmp.height / scale;
+				car.setDefault();				
+				scale += 0.1;
+				break;
+			}
+		}**/
+		// восстановить дефолтные настройки машины путем обнуления переменных
+		// походу тайлы не там, где спавим их, т.к. коллизия происходит раньше, еще до тайла
 	}
 	/* SETUP */
 

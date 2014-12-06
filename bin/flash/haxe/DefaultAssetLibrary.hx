@@ -47,6 +47,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("img/37294112.jpg", AssetType.IMAGE);
 		className.set ("img/car.png", __ASSET__img_car_png);
 		type.set ("img/car.png", AssetType.IMAGE);
+		className.set ("img/car.xcf", __ASSET__img_car_xcf);
+		type.set ("img/car.xcf", AssetType.BINARY);
 		className.set ("img/level.png", __ASSET__img_level_png);
 		type.set ("img/level.png", AssetType.IMAGE);
 		className.set ("img/level.xcf", __ASSET__img_level_xcf);
@@ -74,6 +76,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "img/car.xcf";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
 		id = "img/level.png";
 		path.set (id, id);
 		
@@ -115,6 +121,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("img/car.png", __ASSET__img_car_png);
 		type.set ("img/car.png", AssetType.IMAGE);
+		
+		className.set ("img/car.xcf", __ASSET__img_car_xcf);
+		type.set ("img/car.xcf", AssetType.BINARY);
 		
 		className.set ("img/level.png", __ASSET__img_level_png);
 		type.set ("img/level.png", AssetType.IMAGE);
@@ -710,6 +719,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 @:keep @:bind class __ASSET__img_37294112_jpg extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind class __ASSET__img_car_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind class __ASSET__img_car_xcf extends flash.utils.ByteArray { }
 @:keep @:bind class __ASSET__img_level_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind class __ASSET__img_level_xcf extends flash.utils.ByteArray { }
 @:keep @:bind class __ASSET__img_road_jpg extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -732,6 +742,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
 #end
 
 #elseif (windows || mac || linux)
@@ -739,6 +750,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 //@:bitmap("assets/img/37294112.jpg") class __ASSET__img_37294112_jpg extends openfl.display.BitmapData {}
 //@:bitmap("assets/img/car.png") class __ASSET__img_car_png extends openfl.display.BitmapData {}
+//@:file("assets/img/car.xcf") class __ASSET__img_car_xcf extends lime.utils.ByteArray {}
 //@:bitmap("assets/img/level.png") class __ASSET__img_level_png extends openfl.display.BitmapData {}
 //@:file("assets/img/level.xcf") class __ASSET__img_level_xcf extends lime.utils.ByteArray {}
 //@:bitmap("assets/img/road.jpg") class __ASSET__img_road_jpg extends openfl.display.BitmapData {}

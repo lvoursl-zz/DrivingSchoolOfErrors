@@ -10,9 +10,10 @@ import openfl.display.BitmapData;
  */
 class Game extends Sprite
 {
-	var field:Array<Int> = [];
-	var tilesSprite:Sprite = new Sprite();
-	
+	public var field:Array<Int> = [];
+	public var tilesSprite:Sprite = new Sprite();
+	public var arrayOfFields:Array<Bitmap> = [];
+	public var wall:Bool = false;
 	public function new() 
 	{
 		super();
@@ -53,11 +54,20 @@ class Game extends Sprite
 					//case 3: 
 					default: null;
 				}
+				
+				switch(field[ix + iy * bitmapData.width]) {
+					case 1: wall = true;
+					default: wall = false;
+				}
 				if (bmpData != null) {
 					var bmp = new Bitmap(bmpData);
 					bmp.x = ix * 11;
 					bmp.y = iy * 11;
 					tilesSprite.addChild(bmp);
+					if (wall) {
+						arrayOfFields.push(bmp);
+						wall = false;
+					}
 				}
 			}
 		}
