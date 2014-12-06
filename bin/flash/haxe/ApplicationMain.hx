@@ -39,12 +39,20 @@ class ApplicationMain {
 		types.push (AssetType.BINARY);
 		
 		
+		urls.push ("img/green.png");
+		types.push (AssetType.IMAGE);
+		
+		
 		urls.push ("img/level.png");
 		types.push (AssetType.IMAGE);
 		
 		
 		urls.push ("img/level.xcf");
 		types.push (AssetType.BINARY);
+		
+		
+		urls.push ("img/red.png");
+		types.push (AssetType.IMAGE);
 		
 		
 		urls.push ("img/road.jpg");

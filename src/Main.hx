@@ -5,6 +5,9 @@ import flash.events.Event;
 import flash.Lib;
 import flash.display.StageAlign;
 import flash.display.StageScaleMode;
+import openfl.Assets;
+import openfl.display.Bitmap;
+import openfl.display.BitmapData;
 import openfl.display.StageDisplayState;
 import openfl.events.KeyboardEvent;
 
@@ -21,6 +24,7 @@ class Main extends Sprite
 	public static var keys:Map<Int,Bool> = new Map();
 	var car:Car;
 	var scale:Float = 1;
+	var canGo:Bool = true;
 	/* ENTRY POINT */
 	
 	function resize(e) 
@@ -64,29 +68,50 @@ class Main extends Sprite
 	}
 	
 	public function onFrame(e:Event) {
-		
+		frame++;
 		for (tile in game.arrayOfFields) {
 			if (car.bmp.hitTestObject(tile)) {
-				//car.bmp.scaleX = 0.5 / scale;
-				//car.bmp.scaleY = 0.5 / scale;
-				/*car.bmp.width = car.bmp.width / scale;
-				car.bmp.height = car.bmp.height / scale;
-				scale++;
-				car.setDefault();*/
-				
-
 				if (scale < 1.6) {
 					car.bmp.width = car.bmp.width / scale;
 					car.bmp.height = car.bmp.height / scale;
 					scale += 0.1;
 				}
-				trace(scale);
 				car.setDefault();				
 				break;
 			}
 		}
-		// восстановить дефолтные настройки машины путем обнуления переменных
-		// походу тайлы не там, где спавим их, т.к. коллизия происходит раньше, еще до тайла
+		
+		if (!canGo) {
+			for (tile in game.trafficLightArray) {
+				if (car.bmp.hitTestObject(tile)) {
+					if (scale < 1.6) {
+						car.bmp.width = car.bmp.width / scale;
+						car.bmp.height = car.bmp.height / scale;
+						scale += 0.1;
+					}
+					car.setDefault();				
+					break;
+				}
+			}
+		}
+		
+		if ((frame % 200) == 0) onTrafficLight();
+		if ((frame % 230) == 0) offTrafficLight();
+		if ((frame % 1000) == 0) frame = 0;
+	}
+	
+	public function onTrafficLight() {
+		for (lite in game.trafficLightArray) {
+			lite.bitmapData = Assets.getBitmapData("img/red.png"); 
+			canGo = false;
+		}
+	}
+	
+	public function offTrafficLight() {
+		for (lite in game.trafficLightArray) {
+			lite.bitmapData = Assets.getBitmapData("img/green.png"); 
+			canGo = true;
+		}
 	}
 	/* SETUP */
 
