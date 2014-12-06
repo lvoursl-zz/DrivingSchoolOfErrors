@@ -81,6 +81,14 @@ class Main extends Sprite
 			}
 		}
 		
+		for (finishTile in game.finishTilesArray) {
+			if (car.bmp.hitTestObject(finishTile)) {
+				var screen = new Screen();
+				addChild(screen);
+				break;
+			}
+		}
+		
 		if (!canGo) {
 			for (tile in game.trafficLightArray) {
 				if (car.bmp.hitTestObject(tile)) {

@@ -35,8 +35,8 @@ class ApplicationMain {
 		types.push (AssetType.IMAGE);
 		
 		
-		urls.push ("img/car.xcf");
-		types.push (AssetType.BINARY);
+		urls.push ("img/finish.png");
+		types.push (AssetType.IMAGE);
 		
 		
 		urls.push ("img/green.png");
@@ -47,27 +47,11 @@ class ApplicationMain {
 		types.push (AssetType.IMAGE);
 		
 		
-		urls.push ("img/level.xcf");
-		types.push (AssetType.BINARY);
-		
-		
 		urls.push ("img/red.png");
 		types.push (AssetType.IMAGE);
 		
 		
-		urls.push ("img/road.jpg");
-		types.push (AssetType.IMAGE);
-		
-		
-		urls.push ("img/road.png");
-		types.push (AssetType.IMAGE);
-		
-		
 		urls.push ("img/road1.png");
-		types.push (AssetType.IMAGE);
-		
-		
-		urls.push ("img/spritesheet.png");
 		types.push (AssetType.IMAGE);
 		
 		

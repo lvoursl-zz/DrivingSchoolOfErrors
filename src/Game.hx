@@ -14,8 +14,11 @@ class Game extends Sprite
 	public var tilesSprite:Sprite = new Sprite();
 	public var arrayOfFields:Array<Bitmap> = [];
 	public var trafficLightArray:Array<Bitmap> = [];
+	public var finishTilesArray:Array<Bitmap> = [];
 	public var wall:Bool = false;
 	public var trafficLite:Bool = false;
+	public var finishTile:Bool = false;
+	
 	public function new() 
 	{
 		super();
@@ -35,6 +38,7 @@ class Game extends Sprite
 					case 0xffffff: 1;
 					case 0x000000: 2;
 					case 0xff0000: 3;
+					case 0x0000ff: 4;
 					default: 0;
 				}
 				field.push(cell);
@@ -54,6 +58,7 @@ class Game extends Sprite
 					case 1: Assets.getBitmapData("img/wall.png");
 					case 2: Assets.getBitmapData("img/road1.png");
 					case 3: Assets.getBitmapData("img/green.png");
+					case 4: Assets.getBitmapData("img/finish.png");
 					default: null;
 				}
 				
@@ -62,7 +67,12 @@ class Game extends Sprite
 				switch(field[ix + iy * bitmapData.width]) {
 					case 1: wall = true;
 					case 3: trafficLite = true;
-					default: wall = false;
+					case 4: finishTile = true;
+					default: { 
+						wall = false;
+						trafficLite = false;
+						finishTile = false;
+					}
 				}
 				if (bmpData != null) {
 					var bmp = new Bitmap(bmpData);
@@ -78,6 +88,10 @@ class Game extends Sprite
 					if (trafficLite) {
 						trafficLightArray.push(bmp);
 						trafficLite = false;
+					}
+					if (finishTile) {
+						finishTilesArray.push(bmp);
+						finishTile = false;
 					}
 				}
 			}

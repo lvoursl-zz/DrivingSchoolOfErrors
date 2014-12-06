@@ -47,24 +47,16 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("img/37294112.jpg", AssetType.IMAGE);
 		className.set ("img/car.png", __ASSET__img_car_png);
 		type.set ("img/car.png", AssetType.IMAGE);
-		className.set ("img/car.xcf", __ASSET__img_car_xcf);
-		type.set ("img/car.xcf", AssetType.BINARY);
+		className.set ("img/finish.png", __ASSET__img_finish_png);
+		type.set ("img/finish.png", AssetType.IMAGE);
 		className.set ("img/green.png", __ASSET__img_green_png);
 		type.set ("img/green.png", AssetType.IMAGE);
 		className.set ("img/level.png", __ASSET__img_level_png);
 		type.set ("img/level.png", AssetType.IMAGE);
-		className.set ("img/level.xcf", __ASSET__img_level_xcf);
-		type.set ("img/level.xcf", AssetType.BINARY);
 		className.set ("img/red.png", __ASSET__img_red_png);
 		type.set ("img/red.png", AssetType.IMAGE);
-		className.set ("img/road.jpg", __ASSET__img_road_jpg);
-		type.set ("img/road.jpg", AssetType.IMAGE);
-		className.set ("img/road.png", __ASSET__img_road_png);
-		type.set ("img/road.png", AssetType.IMAGE);
 		className.set ("img/road1.png", __ASSET__img_road1_png);
 		type.set ("img/road1.png", AssetType.IMAGE);
-		className.set ("img/spritesheet.png", __ASSET__img_spritesheet_png);
-		type.set ("img/spritesheet.png", AssetType.IMAGE);
 		className.set ("img/wall.png", __ASSET__img_wall_png);
 		type.set ("img/wall.png", AssetType.IMAGE);
 		
@@ -80,10 +72,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
-		id = "img/car.xcf";
+		id = "img/finish.png";
 		path.set (id, id);
 		
-		type.set (id, AssetType.BINARY);
+		type.set (id, AssetType.IMAGE);
 		id = "img/green.png";
 		path.set (id, id);
 		
@@ -92,27 +84,11 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
-		id = "img/level.xcf";
-		path.set (id, id);
-		
-		type.set (id, AssetType.BINARY);
 		id = "img/red.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
-		id = "img/road.jpg";
-		path.set (id, id);
-		
-		type.set (id, AssetType.IMAGE);
-		id = "img/road.png";
-		path.set (id, id);
-		
-		type.set (id, AssetType.IMAGE);
 		id = "img/road1.png";
-		path.set (id, id);
-		
-		type.set (id, AssetType.IMAGE);
-		id = "img/spritesheet.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -134,8 +110,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("img/car.png", __ASSET__img_car_png);
 		type.set ("img/car.png", AssetType.IMAGE);
 		
-		className.set ("img/car.xcf", __ASSET__img_car_xcf);
-		type.set ("img/car.xcf", AssetType.BINARY);
+		className.set ("img/finish.png", __ASSET__img_finish_png);
+		type.set ("img/finish.png", AssetType.IMAGE);
 		
 		className.set ("img/green.png", __ASSET__img_green_png);
 		type.set ("img/green.png", AssetType.IMAGE);
@@ -143,23 +119,11 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("img/level.png", __ASSET__img_level_png);
 		type.set ("img/level.png", AssetType.IMAGE);
 		
-		className.set ("img/level.xcf", __ASSET__img_level_xcf);
-		type.set ("img/level.xcf", AssetType.BINARY);
-		
 		className.set ("img/red.png", __ASSET__img_red_png);
 		type.set ("img/red.png", AssetType.IMAGE);
 		
-		className.set ("img/road.jpg", __ASSET__img_road_jpg);
-		type.set ("img/road.jpg", AssetType.IMAGE);
-		
-		className.set ("img/road.png", __ASSET__img_road_png);
-		type.set ("img/road.png", AssetType.IMAGE);
-		
 		className.set ("img/road1.png", __ASSET__img_road1_png);
 		type.set ("img/road1.png", AssetType.IMAGE);
-		
-		className.set ("img/spritesheet.png", __ASSET__img_spritesheet_png);
-		type.set ("img/spritesheet.png", AssetType.IMAGE);
 		
 		className.set ("img/wall.png", __ASSET__img_wall_png);
 		type.set ("img/wall.png", AssetType.IMAGE);
@@ -737,25 +701,17 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 @:keep @:bind class __ASSET__img_37294112_jpg extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind class __ASSET__img_car_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind class __ASSET__img_car_xcf extends flash.utils.ByteArray { }
+@:keep @:bind class __ASSET__img_finish_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind class __ASSET__img_green_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind class __ASSET__img_level_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind class __ASSET__img_level_xcf extends flash.utils.ByteArray { }
 @:keep @:bind class __ASSET__img_red_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind class __ASSET__img_road_jpg extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind class __ASSET__img_road_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind class __ASSET__img_road1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind class __ASSET__img_spritesheet_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind class __ASSET__img_wall_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 
 
 #elseif html5
 
 #if openfl
-
-
-
-
 
 
 
@@ -772,15 +728,11 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 //@:bitmap("assets/img/37294112.jpg") class __ASSET__img_37294112_jpg extends openfl.display.BitmapData {}
 //@:bitmap("assets/img/car.png") class __ASSET__img_car_png extends openfl.display.BitmapData {}
-//@:file("assets/img/car.xcf") class __ASSET__img_car_xcf extends lime.utils.ByteArray {}
+//@:bitmap("assets/img/finish.png") class __ASSET__img_finish_png extends openfl.display.BitmapData {}
 //@:bitmap("assets/img/green.png") class __ASSET__img_green_png extends openfl.display.BitmapData {}
 //@:bitmap("assets/img/level.png") class __ASSET__img_level_png extends openfl.display.BitmapData {}
-//@:file("assets/img/level.xcf") class __ASSET__img_level_xcf extends lime.utils.ByteArray {}
 //@:bitmap("assets/img/red.png") class __ASSET__img_red_png extends openfl.display.BitmapData {}
-//@:bitmap("assets/img/road.jpg") class __ASSET__img_road_jpg extends openfl.display.BitmapData {}
-//@:bitmap("assets/img/road.png") class __ASSET__img_road_png extends openfl.display.BitmapData {}
 //@:bitmap("assets/img/road1.png") class __ASSET__img_road1_png extends openfl.display.BitmapData {}
-//@:bitmap("assets/img/spritesheet.png") class __ASSET__img_spritesheet_png extends openfl.display.BitmapData {}
 //@:bitmap("assets/img/wall.png") class __ASSET__img_wall_png extends openfl.display.BitmapData {}
 //
 
