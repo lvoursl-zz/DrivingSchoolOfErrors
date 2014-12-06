@@ -18,12 +18,12 @@ class Car extends Sprite
 	{
 		super();
 		bmp = new Bitmap(Assets.getBitmapData("img/car.png"));
-		this.x = 100;
-		this.y = 680;
+		this.x = 90;
+		this.y = 670;
 		bmp.x = - bmp.width / 2;
 		bmp.y = - bmp.height / 2;
-		bmp.scaleX = 0.5;
-		bmp.scaleY = 0.5;
+		//bmp.scaleX = 0.5;
+		//bmp.scaleY = 0.5;
 		this.addChild(bmp);
 	}
 	
@@ -46,8 +46,8 @@ class Car extends Sprite
 		private var pressCtrl:Bool = false;
 		
 		public function setDefault() {
-			this.x = 100;
-			this.y = 680;
+			this.x = 70;
+			this.y = 650;
 			bmp.x = - bmp.width / 2;
 			bmp.y = - bmp.height / 2;
 			FRICTIONMOD = 0.97; // 1 = no friction

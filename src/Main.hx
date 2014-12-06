@@ -65,22 +65,26 @@ class Main extends Sprite
 	
 	public function onFrame(e:Event) {
 		
-		/*for (tile in game.arrayOfFields) {
+		for (tile in game.arrayOfFields) {
 			if (car.bmp.hitTestObject(tile)) {
 				//car.bmp.scaleX = 0.5 / scale;
 				//car.bmp.scaleY = 0.5 / scale;
 				/*car.bmp.width = car.bmp.width / scale;
 				car.bmp.height = car.bmp.height / scale;
 				scale++;
-				car.setDefault();
-				trace(frame);
-				/*car.bmp.width = car.bmp.width / scale;
-				car.bmp.height = car.bmp.height / scale;
+				car.setDefault();*/
+				
+
+				if (scale < 1.6) {
+					car.bmp.width = car.bmp.width / scale;
+					car.bmp.height = car.bmp.height / scale;
+					scale += 0.1;
+				}
+				trace(scale);
 				car.setDefault();				
-				scale += 0.1;
 				break;
 			}
-		}**/
+		}
 		// восстановить дефолтные настройки машины путем обнуления переменных
 		// походу тайлы не там, где спавим их, т.к. коллизия происходит раньше, еще до тайла
 	}

@@ -61,8 +61,10 @@ class Game extends Sprite
 				}
 				if (bmpData != null) {
 					var bmp = new Bitmap(bmpData);
-					bmp.x = ix * 11;
-					bmp.y = iy * 11;
+					bmp.scaleX = 0.25;
+					bmp.scaleY = 0.25;
+					bmp.x = ix * 10.5;
+					bmp.y = iy * 10.9;
 					tilesSprite.addChild(bmp);
 					if (wall) {
 						arrayOfFields.push(bmp);
